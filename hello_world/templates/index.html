@@ -7,17 +7,34 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="GitHub Codespaces ♥️ Django">
-    <meta name="author" content="GitHub Codespaces">
-    <meta name="generator" content="GitHub Codespaces">
     <meta name="theme-color" content="#000000">
-    <title>{% block title %}{{ title }} | GitHub Codespaces ♥️ Django{% endblock %}</title>
+    <title>LoginWebknowledge</title>
     
     <link rel="stylesheet" href="{% static 'main.css' %}">
 </head>
 
 <body>
-    <h1>   Webknowledge     </h1>
-</body>
+    <div class = "sobrenos">
+        <a href="sobrenos/">Sobre Nós</a>
+    </div>
 
+
+
+
+
+    <div class="container">
+        <div class="logo">
+            <h1>Webknowledge</h1>
+            <img src="static/icone2.png" alt="Logo">
+        </div>
+        <div class="login-box">
+            <form action="#">
+                <input type="email" placeholder="xxxxx@xxxxx.com" required>
+                <input type="password" placeholder="Insira sua senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <a href="cadastro/">Ainda não tem uma conta?</a>
+        </div>
+    </div>
+</body>
 </html>
