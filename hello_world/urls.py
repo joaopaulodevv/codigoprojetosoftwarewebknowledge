@@ -19,15 +19,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
+from webknowledge import views
 from hello_world.core import views as core_views
 
 urlpatterns = [
-    path("", core_views.index),
+    path("", views.index),
     path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
-    path("cadastro/",core_views.cadastro),
-    path("sobrenos/",core_views.sobrenos),
+    path("cadastro/",views.cadastro),
+    path("sobrenos/",views.sobrenos),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
