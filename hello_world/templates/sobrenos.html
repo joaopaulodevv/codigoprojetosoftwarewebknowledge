@@ -1,7 +1,53 @@
+{% load django_browser_reload %}
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Webknowledge - Novidades e Sobre Nós">
+    <meta name="author" content="Webknowledge Team">
+    <meta name="theme-color" content="#000000">
+    <title>{% block title %}Novidades e Sobre Nós | Webknowledge{% endblock %}</title>
+    
+ 
+    <link rel="stylesheet" href="{% static 'cadastro.css' %}">
+</head>
+
 <body>
 
-    essa pagina tera os updates e informacoes 
-    do site e podera ser acessada sem login
+    <div class="background-pattern"></div>
 
+    <div class="content-container">
+    
+        <div class="brand-logo">
+            Webknowledge <span><img src="{% static 'icone2.png' %}" alt="icon" width="40"></span>
+        </div>
+
+        
+        <div class="news-box">
+            <h2>Últimas Novidades</h2>
+            <p>Aqui você encontra as últimas atualizações e notícias sobre nossa plataforma. Fique por dentro!</p>
+            <ul>
+                <li>Nossa nova funcionalidade de aulas interativas está no ar.</li>
+                <li>Atualização de interface para facilitar a navegação dos usuários.</li>
+                <li>Agora contamos com mais de 500 novos tutores disponíveis em diversas disciplinas.</li>
+            </ul>
+        </div>
+
+        <div class="about-box">
+            <h2>Sobre Nós</h2>
+            <p>A Webknowledge é uma plataforma dedicada a conectar alunos com os melhores tutores. Nossa missão é oferecer um ambiente de aprendizado acessível, prático e eficiente.</p>
+            <p>Desde nossa fundação em 2023, temos ajudado milhares de estudantes a alcançar seus objetivos acadêmicos, proporcionando um serviço personalizado e de qualidade.</p>
+        </div>
+    </div>
+
+    <div class="icons">
+    
+        <a href="/">Entrar</a>
+    </div>
 
 </body>
+</html>

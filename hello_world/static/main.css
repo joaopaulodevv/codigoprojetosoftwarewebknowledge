@@ -30,8 +30,8 @@ h1 {
 
 .login-box input[type="email"],
 .login-box input[type="password"] {
-  width: 100%;
-  padding: 10px;
+  width: 80%;
+  padding: 20px;
   margin: 10px 0;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -80,9 +80,9 @@ h1 {
 
 .sobrenos{
   
-    position: absolute; /* Necessário para controlar a posição com 'top' e 'right' */
-    top: 10px;            /* Define a distância do topo */
-    right: 10px;          /* Define a distância da direita */
+    position: absolute; 
+    top: 10px;            
+    right: 10px;          
   
   color : #fff;
 

@@ -1,0 +1,83 @@
+
+.background-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #708090;
+    z-index: -1;
+}
+
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.brand-logo {
+    font-size: 2.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.login-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-box input[type="text"],
+.login-box input[type="email"],
+.login-box input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.login-box button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-box button:hover {
+    background-color: #444;
+}
+
+.login-box a {
+    display: block;
+    margin-top: 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+.icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
