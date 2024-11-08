@@ -2,16 +2,29 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class Aluno(models.Model):
+class Usuariosite(models.Model):
+    idusuario =  models.IntegerField()
+    email = models.EmailField()
+    cpf = models.IntegerField(max_length=11)
+    datadenascimento = models.DateField()
+    nota = models.FloatField(max_length=3)
     nome = models.CharField(max_length=100)
-    idaluno = models.IntegerField()
+
+    def avaliarusuario(self, idusuario):
+      
+        pass
+
+
+
+
+class Aluno(Usuariosite):
+
+    
+    
+    qtdaulasassistidas = models.IntegerField()
 
     def agendaraula(self, professor):
 
-        pass
-
-    def avaliarprof(self, professor):
-      
         pass
 
     def __str__(self):
@@ -19,7 +32,10 @@ class Aluno(models.Model):
 
 
 class Professor(models.Model):
-    idProfessor = models.IntegerField()  
+    
+
+    qtdaulasfeitas = models.IntegerField()
+    disciplina = models.CharField(max_length=40)
     especialidade = models.CharField(max_length=200)
 
     def criarPerfil(self):
@@ -45,8 +61,10 @@ class Aula(models.Model):
 
 
 class Avaliacao(models.Model):  
-    idAvaliacao = models.IntegerField()  
+   
+    avaliada =  models.ForeignKey(Usuariosite, on_delete=models.CASCADE) 
     nota = models.FloatField()  
+    comentario = models.CharField(max_length=200)
 
     def enviar(self):
         

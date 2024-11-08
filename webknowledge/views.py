@@ -12,3 +12,7 @@ def cadastro(request):
 
 def sobrenos(request):
     return render(request,"sobrenos.html")
+
+
+def homealuno(request):
+    return render(request,"homealuno.html")

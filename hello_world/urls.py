@@ -28,6 +28,7 @@ urlpatterns = [
     path("__reload__/", include("django_browser_reload.urls")),
     path("cadastro/",views.cadastro),
     path("sobrenos/",views.sobrenos),
+    path("homealuno/",views.homealuno)
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
