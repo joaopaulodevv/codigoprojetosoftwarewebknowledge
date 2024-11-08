@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Usuariosite(models.Model):
     idusuario =  models.IntegerField()
     email = models.EmailField()
-    cpf = models.IntegerField(max_length=11)
+    cpf = models.CharField(max_length=11)
     datadenascimento = models.DateField()
     nota = models.FloatField(max_length=3)
     nome = models.CharField(max_length=100)
@@ -19,8 +19,6 @@ class Usuariosite(models.Model):
 
 class Aluno(Usuariosite):
 
-    
-    
     qtdaulasassistidas = models.IntegerField()
 
     def agendaraula(self, professor):
@@ -54,7 +52,7 @@ class Aula(models.Model):
     idAula = models.IntegerField()
     dataAula = models.DateField()
     professor = models.ForeignKey(Professor, on_delete=models.CASCADE)
-    aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE)
+    
 
     def __str__(self):
         return f'Aula {self.idAula} - {self.dataAula}'
